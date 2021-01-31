@@ -120,7 +120,7 @@
                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
                 ],
                 "new_values":[
-                  "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None",
+                  "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None"
                 ],
                 "inplaces":[
                   "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True"
@@ -132,7 +132,7 @@
             "operation_name":"encode_labels",
             "params":{
                 "in_columns":[
-"SaleCondition", "SaleType", "Functional", "KitchenQual",
+              "SaleCondition", "SaleType", "Functional", "KitchenQual",
              "Electrical", "CentralAir", "BsmtFinType2",
              "HeatingQC", "Heating", "MiscFeature", "Fence", "PavedDrive",
              "GarageCond", "GarageQual", "GarageType",
@@ -142,7 +142,7 @@
              "RoofStyle", "OverallCond", "HouseStyle", "BldgType", "Condition2",
              "Condition1", "Neighborhood", "LandSlope", "LotConfig",
              "Utilities", "LandContour", "LotShape", "Alley", "Street",
-             "MSZoning", "MSSubClass",
+             "MSZoning", "MSSubClass"
                 ]
             }
         }
