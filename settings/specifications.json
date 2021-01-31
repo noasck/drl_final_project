@@ -37,7 +37,8 @@
                     0
                 ],
                 "methods":[
-                    "addition"
+                    "addition",
+                  "addition"
                 ]
             }
         },
