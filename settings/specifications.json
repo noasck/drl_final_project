@@ -17,7 +17,7 @@
                     ]
                 ],
                 "out_columns":[
-                    "FamilySize"
+                    "TotalSqr"
                 ],
                 "coefficients_list":[
                     [
@@ -60,10 +60,13 @@
                 "coefficients_list":[
                     [
                         -1
+                    ],
+                    [
+                        -1
                     ]
                 ],
                 "biases":[
-                    2020
+                    2020, 2020
                 ],
                 "methods":[
                     "addition"
