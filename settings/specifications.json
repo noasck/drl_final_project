@@ -7,42 +7,8 @@
     },
     "operations":[
 
-       {
-            "operation_number":1,
-            "operation_name":"columns_combination",
-            "params":{
-                "in_columns_list":[
-                    [
-                      "1stFlrSF",  "2ndFlrSF",   "LowQualFinSF", "GrLivArea", "BsmtFullBath", "BsmtHalfBath", "FullBath", "HalfBath", "BedroomAbvGr", "KitchenAbvGr"
-                    ]
-                ],
-                "out_columns":[
-                    "TotalSqr"
-                ],
-                "coefficients_list":[
-                    [
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1
-                    ]
-                ],
-                "biases":[
-                    0
-                ],
-                "methods":[
-                    "addition"
-                ]
-            }
-        },
              {
-            "operation_number":2,
+            "operation_number":1,
             "operation_name":"columns_combination",
             "params":{
                 "in_columns_list":[
@@ -76,7 +42,7 @@
         },
 
               {
-            "operation_number":3,
+            "operation_number":2,
             "operation_name":"drop_columns",
             "params":{
                 "in_columns":["PoolQC", "GarageFinish", "GarageYrBlt", "FireplaceQu", "BsmtUnfSF", "Id",
