@@ -37,8 +37,7 @@
                     0
                 ],
                 "methods":[
-                    "addition",
-                  "addition"
+                    "addition"
                 ]
             }
         },
@@ -70,6 +69,7 @@
                     2020, 2020
                 ],
                 "methods":[
+                    "addition",
                     "addition"
                 ]
             }
