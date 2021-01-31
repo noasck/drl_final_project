@@ -1,10 +1,18 @@
 from sklearn.ensemble import GradientBoostingRegressor
+import pickle
 
+# class Estimator:
+#     @staticmethod
+#     def fit(train_x, train_y):
+#         return GradientBoostingRegressor(loss='huber', learning_rate=0.11, n_estimators=100).fit(train_x, train_y)
 
 class Estimator:
     @staticmethod
     def fit(train_x, train_y):
+        with open('GradientBoostingRegressor.pickle', 'wb')as f:
+            pickle.dump(GradientBoostingRegressor(loss='huber', learning_rate=0.11, n_estimators=100).fit(train_x, train_y), f)
         return GradientBoostingRegressor(loss='huber', learning_rate=0.11, n_estimators=100).fit(train_x, train_y)
+
 
     @staticmethod
     def predict(trained, test_x):
