@@ -120,7 +120,7 @@
                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
                 ],
                 "new_values":[
-                  "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"
+                  "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None",
                 ],
                 "inplaces":[
                   "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True"
@@ -143,10 +143,6 @@
              "Condition1", "Neighborhood", "LandSlope", "LotConfig",
              "Utilities", "LandContour", "LotShape", "Alley", "Street",
              "MSZoning", "MSSubClass",
-                  "YrSold", "MiscVal", "MoSold", "PoolArea", "ScreenPorch", "3SsnPorch",
-        "EnclosedPorch", "OpenPorchSF", "WoodDeckSF", "GarageArea", "GarageCars",
-        "TotRmsAbvGrd", "Fireplaces", "TotalBsmtSF", "BsmtFinSF1", "MasVnrArea", "OverallQual",
-        "LotArea", "LotFrontage"
                 ]
             }
         }
