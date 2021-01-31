@@ -47,10 +47,10 @@
             "params":{
                 "in_columns_list":[
                     [
-                      "YearBuilt"
+                      "YearBuilt", "YearRemodAdd"
                     ],
                     [
-                      "YearRemodAdd"
+                      "YearRemodAdd", "YearBuilt"
                     ]
                 ],
                 "out_columns":[
@@ -59,10 +59,10 @@
                 ],
                 "coefficients_list":[
                     [
-                        -1
+                        -1, 0
                     ],
                     [
-                        -1
+                        -1, 0
                     ]
                 ],
                 "biases":[
