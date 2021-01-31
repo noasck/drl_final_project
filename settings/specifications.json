@@ -1,0 +1,134 @@
+{
+    "description":{
+        "X": ["Id", "MSSubClass", "MSZoning", "LotFrontage", "LotArea", "Street", "Alley", "LotShape", "LandContour", "Utilities", "LotConfig", "LandSlope", "Neighborhood", "Condition1", "Condition2", "BldgType", "HouseStyle", "OverallQual", "OverallCond", "YearBuilt", "YearRemodAdd", "RoofStyle", "RoofMatl", "Exterior1st", "Exterior2nd", "MasVnrType", "MasVnrArea", "ExterQual", "ExterCond", "Foundation", "BsmtQual", "BsmtCond", "BsmtExposure", "BsmtFinType1", "BsmtFinSF1", "BsmtFinType2", "BsmtFinSF2", "BsmtUnfSF", "TotalBsmtSF", "Heating", "HeatingQC", "CentralAir", "Electrical", "1stFlrSF", "2ndFlrSF", "LowQualFinSF", "GrLivArea", "BsmtFullBath", "BsmtHalfBath", "FullBath", "HalfBath", "BedroomAbvGr", "KitchenAbvGr", "KitchenQual", "TotRmsAbvGrd", "Functional", "Fireplaces", "FireplaceQu", "GarageType", "GarageYrBlt", "GarageFinish", "GarageCars", "GarageArea", "GarageQual", "GarageCond", "PavedDrive", "WoodDeckSF", "OpenPorchSF", "EnclosedPorch", "3SsnPorch", "ScreenPorch", "PoolArea", "PoolQC", "Fence", "MiscFeature", "MiscVal", "MoSold", "YrSold", "SaleType", "SaleCondition"],
+        "final_columns":["MSSubClass", "MSZoning", "LotFrontage", "LotArea", "Street", "Alley", "LotShape", "LandContour", "Utilities", "LotConfig", "LandSlope", "Neighborhood", "Condition1", "Condition2", "BldgType", "HouseStyle", "OverallQual", "OverallCond", "YearBuilt", "YearRemodAdd", "RoofStyle", "RoofMatl", "Exterior1st", "Exterior2nd", "MasVnrType", "MasVnrArea", "ExterQual", "ExterCond", "Foundation", "BsmtQual", "BsmtCond", "BsmtExposure", "BsmtFinType1", "BsmtFinSF1", "BsmtFinType2", "BsmtFinSF2", "TotalBsmtSF", "Heating", "HeatingQC", "CentralAir", "Electrical", "KitchenQual", "TotRmsAbvGrd", "Functional", "Fireplaces", "GarageType", "GarageCars", "GarageArea", "GarageQual", "GarageCond", "PavedDrive", "WoodDeckSF", "OpenPorchSF", "EnclosedPorch", "3SsnPorch", "ScreenPorch", "PoolArea", "Fence", "MiscFeature", "MiscVal", "MoSold", "YrSold", "SaleType", "SaleCondition", "TotalSqr"],
+        "y":"SalePrice",
+        "metrics":"mean_absolute_percentage_error"
+    },
+    "operations":[
+
+       {
+            "operation_number":1,
+            "operation_name":"columns_combination",
+            "params":{
+                "in_columns_list":[
+                    [
+                      "1stFlrSF",  "2ndFlrSF",   "LowQualFinSF", "GrLivArea", "BsmtFullBath", "BsmtHalfBath", "FullBath", "HalfBath", "BedroomAbvGr", "KitchenAbvGr"
+                    ]
+                ],
+                "out_columns":[
+                    "FamilySize"
+                ],
+                "coefficients_list":[
+                    [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                ],
+                "biases":[
+                    0
+                ],
+                "methods":[
+                    "addition"
+                ]
+            }
+        },
+             {
+            "operation_number":2,
+            "operation_name":"columns_combination",
+            "params":{
+                "in_columns_list":[
+                    [
+                      "YearBuilt"
+                    ],
+                    [
+                      "YearRemodAdd"
+                    ]
+                ],
+                "out_columns":[
+                    "YearBuilt",
+                    "YearRemodAdd"
+                ],
+                "coefficients_list":[
+                    [
+                        -1
+                    ]
+                ],
+                "biases":[
+                    2020
+                ],
+                "methods":[
+                    "addition"
+                ]
+            }
+        },
+
+              {
+            "operation_number":3,
+            "operation_name":"drop_columns",
+            "params":{
+                "in_columns":["PoolQC", "GarageFinish", "GarageYrBlt", "FireplaceQu", "BsmtUnfSF", "Id",
+        "1stFlrSF", "2ndFlrSF", "LowQualFinSF", "GrLivArea", "BsmtFullBath", "BsmtHalfBath",
+        "FullBath", "HalfBath", "BedroomAbvGr", "KitchenAbvGr"]
+            }
+        },
+              {
+            "operation_number":4,
+            "operation_name":"fill_nans",
+            "params":{
+                "in_columns":[
+                 "SaleCondition", "SaleType", "Functional", "KitchenQual",
+                 "Electrical", "CentralAir", "BsmtFinType2",
+                 "HeatingQC", "Heating", "MiscFeature", "Fence", "PavedDrive",
+                 "GarageCond", "GarageQual", "GarageType",
+                 "BsmtFinSF2", "BsmtFinType1", "BsmtFinType1", "BsmtExposure",
+                 "BsmtCond", "BsmtQual", "Foundation", "ExterCond", "ExterQual",
+                 "MasVnrType", "Exterior2nd", "Exterior1st", "RoofMatl",
+                 "RoofStyle", "OverallCond", "HouseStyle", "BldgType", "Condition2",
+                 "Condition1", "Neighborhood", "LandSlope", "LotConfig",
+                 "Utilities", "LandContour", "LotShape", "Alley", "Street",
+                 "MSZoning", "MSSubClass",
+                  "YrSold", "MiscVal", "MoSold", "PoolArea", "ScreenPorch", "3SsnPorch",
+        "EnclosedPorch", "OpenPorchSF", "WoodDeckSF", "GarageArea", "GarageCars",
+        "TotRmsAbvGrd", "Fireplaces", "TotalBsmtSF", "BsmtFinSF1", "MasVnrArea", "OverallQual",
+        "LotArea", "LotFrontage"
+                ],
+                "methods":[
+                  "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero", "zero",
+                  "median", "median", "median", "median", "median", "median", "median", "median", "median", "median", "median", "median", "median", "median", "median", "median", "median", "median", "median"
+                ]
+            }
+        },
+              {
+            "operation_number":5,
+            "operation_name":"encode_labels",
+            "params":{
+                "in_columns":[
+"SaleCondition", "SaleType", "Functional", "KitchenQual",
+             "Electrical", "CentralAir", "BsmtFinType2",
+             "HeatingQC", "Heating", "MiscFeature", "Fence", "PavedDrive",
+             "GarageCond", "GarageQual", "GarageType",
+             "BsmtFinSF2", "BsmtFinType1", "BsmtFinType1", "BsmtExposure",
+             "BsmtCond", "BsmtQual", "Foundation", "ExterCond", "ExterQual",
+             "MasVnrType", "Exterior2nd", "Exterior1st", "RoofMatl",
+             "RoofStyle", "OverallCond", "HouseStyle", "BldgType", "Condition2",
+             "Condition1", "Neighborhood", "LandSlope", "LotConfig",
+             "Utilities", "LandContour", "LotShape", "Alley", "Street",
+             "MSZoning", "MSSubClass",
+                  "YrSold", "MiscVal", "MoSold", "PoolArea", "ScreenPorch", "3SsnPorch",
+        "EnclosedPorch", "OpenPorchSF", "WoodDeckSF", "GarageArea", "GarageCars",
+        "TotRmsAbvGrd", "Fireplaces", "TotalBsmtSF", "BsmtFinSF1", "MasVnrArea", "OverallQual",
+        "LotArea", "LotFrontage"
+                ]
+            }
+        }
+    ]
+}
