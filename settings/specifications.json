@@ -115,11 +115,7 @@
             "operation_number":5,
             "operation_name":"replace",
             "params":{
-                "in_columns":[
-                    "Title",
-                    "Title",
-                    "Title"
-                ],
+                "in_columns":["SaleCondition", "SaleType", "Functional", "KitchenQual", "Electrical", "CentralAir", "BsmtFinType2", "HeatingQC", "Heating", "MiscFeature", "Fence", "PavedDrive", "GarageCond", "GarageQual", "GarageType", "BsmtFinSF2", "BsmtFinType1", "BsmtFinType1", "BsmtExposure", "BsmtCond", "BsmtQual", "Foundation", "ExterCond", "ExterQual", "MasVnrType", "Exterior2nd", "Exterior1st", "RoofMatl", "RoofStyle", "OverallCond", "HouseStyle", "BldgType", "Condition2", "Condition1", "Neighborhood", "LandSlope", "LotConfig", "Utilities", "LandContour", "LotShape", "Alley", "Street", "MSZoning", "MSSubClass"],
                 "old_values":[
                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
                 ],
