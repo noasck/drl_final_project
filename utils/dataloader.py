@@ -45,7 +45,7 @@ class DataLoader(object):
         self.dataset = self.dataset.drop(drop, axis=1)
 
         for column in strcols:
-            self.dataset[column] = self.dataset[column].fillna("None")
+            self.dataset[column] = self.dataset[column].fillna("0")
             self.dataset[column] = LabelEncoder().fit_transform(self.dataset[column])
 
         for column in numcols:

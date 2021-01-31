@@ -111,8 +111,28 @@
                 ]
             }
         },
-              {
+      {
             "operation_number":5,
+            "operation_name":"replace",
+            "params":{
+                "in_columns":[
+                    "Title",
+                    "Title",
+                    "Title"
+                ],
+                "old_values":[
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+                ],
+                "new_values":[
+                  "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"
+                ],
+                "inplaces":[
+                  "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True", "True"
+                ]
+            }
+        },
+              {
+            "operation_number":6,
             "operation_name":"encode_labels",
             "params":{
                 "in_columns":[
