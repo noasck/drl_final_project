@@ -27,7 +27,7 @@ val_x, val_y = val_set[x_columns], val_set[y_column]
 loader = DataLoader()
 loader.fit(val_x)
 val_processed = loader.load_data()
-print('data: ', val_processed[:10])
+print('data: ', val_processed[:10]["TotalSqr"])
 
 req_data = {'data': json.dumps(val_x.to_dict())}
 response = requests.get('http://0.0.0.0:8000/predict', data=req_data)
