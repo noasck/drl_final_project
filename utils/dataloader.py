@@ -44,12 +44,4 @@ class DataLoader(object):
 
         self.dataset = self.dataset.drop(drop, axis=1)
 
-        for column in strcols:
-            self.dataset[column] = self.dataset[column].fillna("0")
-            self.dataset[column] = LabelEncoder().fit_transform(self.dataset[column])
-
-        for column in numcols:
-            self.dataset[column] = self.dataset[column].fillna(np.nanmedian(self.dataset[column]))
-        #         dataframe[column] = StandartScaler().fit_transform(dataframe[column])
-
         return self.dataset
