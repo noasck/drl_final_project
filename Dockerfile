@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.8.7-slim-buster
 
 WORKDIR /app
 
@@ -9,4 +9,4 @@ RUN export PYTHONPATH='${PYTHONPATH}:/app'
 
 COPY . .
 
-CMD ["python", "./app.py"]
+CMD ["python", "./check.py"]
