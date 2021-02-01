@@ -46,14 +46,14 @@ loader.fit(x_raw)
 X = loader.load_data()
 y = raw_train["SalePrice"]
 
-model = GradientBoostingRegressor(loss='huber', learning_rate=0.11, n_estimators=100, random_state=1)
-model.fit(X, y)
-# with open('models/GradientBoostingRegressor_docker.pickle', 'wb')as f:
-#     pickle.dump(model, f)
-
-model_predict = model.predict(val_processed)
-api_score = eval(metrics)(val_y, model_predict)
-print('accuracy trained: ', api_score)
+# model = GradientBoostingRegressor(loss='huber', learning_rate=0.11, n_estimators=100, random_state=1)
+# model.fit(X, y)
+# # with open('models/GradientBoostingRegressor_docker.pickle', 'wb')as f:
+# #     pickle.dump(model, f)
+#
+# model_predict = model.predict(val_processed)
+# api_score = eval(metrics)(val_y, model_predict)
+# print('accuracy trained: ', api_score)
 
 
 predictor = Predictor()
